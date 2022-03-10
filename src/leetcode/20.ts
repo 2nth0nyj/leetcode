@@ -17,7 +17,7 @@ export function isValid(s: string): boolean {
                 return false
             }
         } else if (v == '}') {
-            if (stack.length > 0 && stack.charAt(stack.length - 1) == '[') {
+            if (stack.length > 0 && stack.charAt(stack.length - 1) == '{') {
                 stack = stack.slice(0, stack.length - 1)
             } else {
                 return false

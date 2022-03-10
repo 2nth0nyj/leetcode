@@ -12,6 +12,8 @@ import { threeSum } from './leetcode/15'
 import { letterCombinations } from './leetcode/17'
 import { fourSum } from './leetcode/18'
 import { isValid } from './leetcode/20'
+import { mergeKLists } from './leetcode/23'
+import { newLineWithIndentation } from 'tslint/lib/utils'
 
 
 
@@ -54,3 +56,11 @@ console.log( "result18 = ", result18)
 
 let result20 = isValid("()[]{}")
 console.log("result20 = ", result20)
+
+var listNodes = [
+    new ListNode(1, new ListNode(4, new ListNode(5))),
+    new ListNode(1, new ListNode(3, new ListNode(4))),
+    new ListNode(2, new ListNode(6)),
+]
+let result22 = mergeKLists(listNodes)
+console.log( "result22 = ", result22)
