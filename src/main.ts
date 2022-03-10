@@ -9,6 +9,7 @@ import { reverse } from './leetcode/7'
 import { isMatch } from './leetcode/10'
 import { longestCommonPrefix } from './leetcode/14'
 import { threeSum } from './leetcode/15'
+import { letterCombinations } from './leetcode/17'
 
 
 
@@ -42,3 +43,6 @@ console.log("result14 = ", result14)
 
 let result15 = threeSum([-1,0,1,2,-1,-4,-2,-3,3,0,4])
 console.log( "result15 = ", result15)
+
+let result16 = letterCombinations("2343")
+console.log( "result16 = ", result16)
