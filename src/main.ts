@@ -10,6 +10,7 @@ import { isMatch } from './leetcode/10'
 import { longestCommonPrefix } from './leetcode/14'
 import { threeSum } from './leetcode/15'
 import { letterCombinations } from './leetcode/17'
+import { fourSum } from './leetcode/18'
 
 
 
@@ -46,3 +47,6 @@ console.log( "result15 = ", result15)
 
 let result16 = letterCombinations("2343")
 console.log( "result16 = ", result16)
+
+let result18 = fourSum([2,2,2,2,2], 8)
+console.log( "result18 = ", result18)
