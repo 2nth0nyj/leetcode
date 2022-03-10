@@ -11,6 +11,7 @@ import { longestCommonPrefix } from './leetcode/14'
 import { threeSum } from './leetcode/15'
 import { letterCombinations } from './leetcode/17'
 import { fourSum } from './leetcode/18'
+import { isValid } from './leetcode/20'
 
 
 
@@ -50,3 +51,6 @@ console.log( "result16 = ", result16)
 
 let result18 = fourSum([2,2,2,2,2], 8)
 console.log( "result18 = ", result18)
+
+let result20 = isValid("()[]{}")
+console.log("result20 = ", result20)
