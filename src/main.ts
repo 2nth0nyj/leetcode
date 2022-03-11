@@ -14,6 +14,8 @@ import { fourSum } from './leetcode/18'
 import { isValid } from './leetcode/20'
 import { mergeKLists } from './leetcode/23'
 import { newLineWithIndentation } from 'tslint/lib/utils'
+import { strStr } from './leetcode/28'
+import { divide } from './leetcode/29'
 
 
 
@@ -64,3 +66,10 @@ var listNodes = [
 ]
 let result22 = mergeKLists(listNodes)
 console.log( "result22 = ", result22)
+
+
+let result28 = strStr("aaaaa", "bba")
+console.log("result28 = ", result28)
+
+let result29 = divide(-2147483648, -1)
+console.log( "result29 = ", result29)
