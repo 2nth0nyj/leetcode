@@ -75,5 +75,5 @@ console.log("result28 = ", result28)
 let result29 = divide(-2147483648, -1)
 console.log( "result29 = ", result29)
 
-let result30 = findSubstring("foobarfoobar",["foo","bar"])
+let result30 = findSubstring("aaa", ["a","a"])
 console.log( "result30 = ", result30)

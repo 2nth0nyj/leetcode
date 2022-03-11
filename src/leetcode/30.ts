@@ -2,12 +2,16 @@ export function findSubstring(s: string, words: string[]): number[] {
     var result = new Set<number>()
     let pumutatedWords = permutate(words)
     pumutatedWords.forEach((v) => {
+        let storedLength = 0
         let n = strStr(s, v)
-        while( n >= 0 ) {
+        while (n >= 0) {
             result.add(n)
-            if ( n + v.length < s.length) {
+            if (n + v.length < s.length) {
+                storedLength += v.length
                 n = strStr(s.slice(n + v.length), v)
-                //re add previous length..
+                if (n >= 0) {
+                    n += storedLength
+                }
             }
             else {
                 n = -1
@@ -20,12 +24,12 @@ export function findSubstring(s: string, words: string[]): number[] {
 function permutate(words: string[]): string[] {
     var tempStringArray: string[][] = [[]]
     var resultArray: string[][] = [[]]
-    for( let word of words) {
+    for (let word of words) {
         tempStringArray = resultArray
         resultArray = []
         for (let a of tempStringArray) {
             let aLength = a.length
-            for( let i = 0; i <= aLength; i++) {
+            for (let i = 0; i <= aLength; i++) {
                 var t = a.slice()
                 t.splice(i, 0, word)
                 resultArray.push(t)
@@ -66,10 +70,10 @@ function strStr(haystack: string, needle: string): number {
 
 function lpsArray(s: string): number[] {
     let lps = new Array<number>()
-    for(let arrayIndex = 0; arrayIndex < s.length; arrayIndex++) {
+    for (let arrayIndex = 0; arrayIndex < s.length; arrayIndex++) {
         lps[arrayIndex] = 0
     }
-    
+
     let l = 0
     let i = 1
     while (i < s.length) {
