@@ -16,6 +16,7 @@ import { mergeKLists } from './leetcode/23'
 import { newLineWithIndentation } from 'tslint/lib/utils'
 import { strStr } from './leetcode/28'
 import { divide } from './leetcode/29'
+import { findSubstring } from './leetcode/30'
 
 
 
@@ -73,3 +74,6 @@ console.log("result28 = ", result28)
 
 let result29 = divide(-2147483648, -1)
 console.log( "result29 = ", result29)
+
+let result30 = findSubstring("foobarfoobar",["foo","bar"])
+console.log( "result30 = ", result30)

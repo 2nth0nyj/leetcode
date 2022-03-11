@@ -15,4 +15,3 @@ export function maxPower(count: number): number {
     }
     return j
 }
-
