@@ -17,6 +17,7 @@ import { newLineWithIndentation } from 'tslint/lib/utils'
 import { strStr } from './leetcode/28'
 import { divide } from './leetcode/29'
 import { findSubstring } from './leetcode/30'
+import { nextPermutation } from './leetcode/31'
 
 
 
@@ -78,3 +79,7 @@ console.log( "result29 = ", result29)
 // let result30 = findSubstring("bcabbcaabbccacacbabccacaababcbb",["c","b","a","c","a","a","a","b","c"])
 let result30 = findSubstring("wordgoodgoodgoodbestword", ["word","good","best","good"])
 console.log( "result30 = ", result30)
+
+var nums = [4, 5, 3, 2, 1]
+let result31 = nextPermutation(nums)
+console.log( "nums = ", nums)
