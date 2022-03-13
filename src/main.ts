@@ -19,6 +19,7 @@ import { findSubstring } from './leetcode/30'
 import { nextPermutation } from './leetcode/31'
 import { longestValidParentheses } from './leetcode/32'
 import { search } from './leetcode/33'
+import { searchRange } from './leetcode/34'
 
 
 
@@ -92,3 +93,6 @@ console.log("result32 = ", result32)
 
 var result33 = search([4,5,6,7,0,1,2],0)
 console.log("result33 = ", result33)
+
+var result34 = searchRange([5,7,7,8,8,10], 8)
+console.log( "result34 = ", result34)
