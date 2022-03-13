@@ -7,7 +7,7 @@ export function isPalindrome(x: number): boolean {
 	var i = 0
 	var j = a.length - 1
 	while( i < j ) {
-		if (a[i] != a[j]) {
+		if (a[i] !== a[j]) {
 			return false
 		}
 		i++

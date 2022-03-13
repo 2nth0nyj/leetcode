@@ -13,11 +13,11 @@ import { letterCombinations } from './leetcode/17'
 import { fourSum } from './leetcode/18'
 import { isValid } from './leetcode/20'
 import { mergeKLists } from './leetcode/23'
-import { newLineWithIndentation } from 'tslint/lib/utils'
 import { strStr } from './leetcode/28'
 import { divide } from './leetcode/29'
 import { findSubstring } from './leetcode/30'
 import { nextPermutation } from './leetcode/31'
+import { longestValidParentheses } from './leetcode/32'
 
 
 
@@ -81,5 +81,10 @@ let result30 = findSubstring("wordgoodgoodgoodbestword", ["word","good","best","
 console.log( "result30 = ", result30)
 
 var nums = [4, 5, 3, 2, 1]
-let result31 = nextPermutation(nums)
+nextPermutation(nums)
 console.log( "nums = ", nums)
+
+
+// var result32 = longestValidParentheses("(()")
+var result32 = longestValidParentheses("(()")
+console.log( "result32 = ", result32)
