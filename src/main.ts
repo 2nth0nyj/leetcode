@@ -18,6 +18,7 @@ import { divide } from './leetcode/29'
 import { findSubstring } from './leetcode/30'
 import { nextPermutation } from './leetcode/31'
 import { longestValidParentheses } from './leetcode/32'
+import { search } from './leetcode/33'
 
 
 
@@ -49,14 +50,14 @@ let result14 = longestCommonPrefix(["flower", "flow", "flight"])
 console.log("result14 = ", result14)
 
 
-let result15 = threeSum([-1,0,1,2,-1,-4,-2,-3,3,0,4])
-console.log( "result15 = ", result15)
+let result15 = threeSum([-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4])
+console.log("result15 = ", result15)
 
 let result16 = letterCombinations("2343")
-console.log( "result16 = ", result16)
+console.log("result16 = ", result16)
 
-let result18 = fourSum([2,2,2,2,2], 8)
-console.log( "result18 = ", result18)
+let result18 = fourSum([2, 2, 2, 2, 2], 8)
+console.log("result18 = ", result18)
 
 let result20 = isValid("()[]{}")
 console.log("result20 = ", result20)
@@ -67,24 +68,27 @@ var listNodes = [
     new ListNode(2, new ListNode(6)),
 ]
 let result22 = mergeKLists(listNodes)
-console.log( "result22 = ", result22)
+console.log("result22 = ", result22)
 
 
 let result28 = strStr("aaaaa", "bba")
 console.log("result28 = ", result28)
 
 let result29 = divide(-2147483648, -1)
-console.log( "result29 = ", result29)
+console.log("result29 = ", result29)
 
 // let result30 = findSubstring("bcabbcaabbccacacbabccacaababcbb",["c","b","a","c","a","a","a","b","c"])
-let result30 = findSubstring("wordgoodgoodgoodbestword", ["word","good","best","good"])
-console.log( "result30 = ", result30)
+let result30 = findSubstring("wordgoodgoodgoodbestword", ["word", "good", "best", "good"])
+console.log("result30 = ", result30)
 
 var nums = [4, 5, 3, 2, 1]
 nextPermutation(nums)
-console.log( "nums = ", nums)
+console.log("nums = ", nums)
 
 
 // var result32 = longestValidParentheses("(()")
 var result32 = longestValidParentheses("(()")
-console.log( "result32 = ", result32)
+console.log("result32 = ", result32)
+
+var result33 = search([4,5,6,7,0,1,2],0)
+console.log("result33 = ", result33)
