@@ -20,6 +20,7 @@ import { nextPermutation } from './leetcode/31'
 import { longestValidParentheses } from './leetcode/32'
 import { search } from './leetcode/33'
 import { searchRange } from './leetcode/34'
+import { searchInsert } from './leetcode/35'
 
 
 
@@ -96,3 +97,7 @@ console.log("result33 = ", result33)
 
 var result34 = searchRange([5,7,7,8,8,10], 8)
 console.log( "result34 = ", result34)
+
+var result35 = searchInsert([1,3,5,6], 7)
+console.log( "result35 = ", result35)
+
