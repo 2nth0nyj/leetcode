@@ -21,6 +21,7 @@ import { longestValidParentheses } from './leetcode/32'
 import { search } from './leetcode/33'
 import { searchRange } from './leetcode/34'
 import { searchInsert } from './leetcode/35'
+import { isValidSudoku } from './leetcode/36'
 
 
 
@@ -92,12 +93,14 @@ console.log("nums = ", nums)
 var result32 = longestValidParentheses("(()")
 console.log("result32 = ", result32)
 
-var result33 = search([4,5,6,7,0,1,2],0)
+var result33 = search([4, 5, 6, 7, 0, 1, 2], 0)
 console.log("result33 = ", result33)
 
-var result34 = searchRange([5,7,7,8,8,10], 8)
-console.log( "result34 = ", result34)
+var result34 = searchRange([5, 7, 7, 8, 8, 10], 8)
+console.log("result34 = ", result34)
 
-var result35 = searchInsert([1,3,5,6], 7)
-console.log( "result35 = ", result35)
+var result35 = searchInsert([1, 3, 5, 6], 7)
+console.log("result35 = ", result35)
 
+var result36 = isValidSudoku([[".",".","4",".",".",".","6","3","."],[".",".",".",".",".",".",".",".","."],["5",".",".",".",".",".",".","9","."],[".",".",".","5","6",".",".",".","."],["4",".","3",".",".",".",".",".","1"],[".",".",".","7",".",".",".",".","."],[".",".",".","5",".",".",".",".","."],[".",".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".",".","."]])
+console.log( "result36 = ", result36)
