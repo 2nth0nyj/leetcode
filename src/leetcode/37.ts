@@ -11,13 +11,10 @@ export function solveSudoku(board: string[][]): void {
             }
         }
     }
-    printBoard(board)
     var nextStack: number = 0
     do {
         nextStack = fillSudoku(stack, nextStack, board)
     } while (nextStack < stack.length)
-    console.log( "after solved")
-    printBoard(board)
 };
 
 function fillSudoku(stack: Array<Cell>, index: number, board: string[][]): number {
@@ -82,42 +79,4 @@ function rowColumnToGrid(row: number, column: number): Array<Array<number>> {
         result[1].push(addColumn)
     }
     return result
-}
-
-
-function printBoard(board: string[][]) {
-    board.forEach((row) => {
-        console.log(row.join(","))
-    })
-}
-
-function rowCheck(row: number, board: string[][]): boolean {
-    var s = new Set<string>()
-    let rowOk = board[row].every((v) => {
-        if (v == ".") {
-            return true
-        }
-        if (s.has(v)) {
-            return false
-        }
-        s.add(v)
-        return true
-    })
-    return rowOk
-}
-
-function columnCheck(column: number, board: string[][]) {
-    var s = new Set<string>()
-    let columnOk = board.every((row) => {
-        let c = row[column]
-        if (c == ".") {
-            return true
-        }
-        if (s.has(c)) {
-            return false
-        }
-        s.add(c)
-        return true
-    })
-    return columnOk
 }
