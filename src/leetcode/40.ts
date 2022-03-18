@@ -1,18 +1,28 @@
 type treeNode = {
     candidate: number,
-    parentCandidateNode: treeNode | undefined,
-    parentCandidatesIndexSet: Array<number>,
-    childrenCandidates?: treeNode[],
+    parentCandidatesIndexes: number[],
     nodeValue: number,
+    parentCandidateNode?: treeNode,
+    childrenCandidates?: treeNode[],
+    valueArray: string,
 }
+
 
 export function combinationSum2(candidates: number[], target: number): number[][] {
     let results: number[][] = []
-    let rootNode = { candidate: -1, parentCandidateNode: undefined, parentCandidatesIndexSet: new Array<number>(), nodeValue: 0 }
+    let rootNode: treeNode = { candidate: -1, parentCandidatesIndexes: new Array<number>(), nodeValue: 0, valueArray: "" }
     let nextHandleNodes: treeNode[] = [rootNode]
-    generateResults(candidates, target, [rootNode], results)
+    nextHandleNodes = generateResults(candidates, target, nextHandleNodes, results)
     while (nextHandleNodes.length > 0) {
         nextHandleNodes = generateResults(candidates, target, nextHandleNodes, results)
+        let resultStringSet = new Set<string>()
+        nextHandleNodes = nextHandleNodes.filter((n) => {
+            if (!resultStringSet.has(n.valueArray)) {
+                resultStringSet.add(n.valueArray)
+                return true
+            }
+            return false
+        })
     }
     return results
 };
@@ -20,22 +30,25 @@ export function combinationSum2(candidates: number[], target: number): number[][
 function generateResults(candidates: number[], target: number, nodes: treeNode[], results: number[][]): treeNode[] {
     let nextHandleNodes: treeNode[] = []
     nodes.forEach((node) => {
-        if (node.parentCandidatesIndexSet.length == candidates.length) {
+        if (node.parentCandidatesIndexes.length == candidates.length) {
             return
         }
-        let maxIndex = node.parentCandidatesIndexSet.reduce((a, b) => { return Math.max(a, b) }, -Infinity)
+        let maxIndex = node.parentCandidatesIndexes.reduce((a, b) => { return Math.max(a, b) }, -Infinity)
         candidates.forEach((candidateValue, candidateIndex) => {
             if (candidateIndex > maxIndex && candidateValue + node.nodeValue <= target) {
                 if (!node.childrenCandidates) {
-                    node.childrenCandidates = []
+                    node.childrenCandidates = new Array<treeNode>()
                 }
-                let updatedParentCandidatesIndexSet = Array.from(node.parentCandidatesIndexSet)
+                let updatedParentCandidatesIndexSet = Array.from(node.parentCandidatesIndexes)
                 updatedParentCandidatesIndexSet.push(candidateIndex)
-                let newNode: treeNode = {
+
+                let valueArray: string = node.valueArray + candidateValue.toString()
+                let newNode = {
                     candidate: candidateValue,
-                    parentCandidateNode: node,
-                    parentCandidatesIndexSet: updatedParentCandidatesIndexSet,
+                    parentCandidatesIndexes: updatedParentCandidatesIndexSet,
                     nodeValue: candidateValue + node.nodeValue,
+                    parentCandidateNode: node,
+                    valueArray: valueArray
                 }
                 node.childrenCandidates.push(newNode)
                 if (newNode.nodeValue == target) {
@@ -65,5 +78,4 @@ function generateResults(candidates: number[], target: number, nodes: treeNode[]
         })
     })
     return nextHandleNodes
-    //  generateResults(candidates, target, nextHandleNodes, results)
 }

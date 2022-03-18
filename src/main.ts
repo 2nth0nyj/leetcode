@@ -113,5 +113,8 @@ import { combinationSum2 } from './leetcode/40'
 // let result38 = countAndSay(4)
 // console.log( "result38 = ", result38)
 
+// let result40 = combinationSum2([10,1,2,7,6,1,5], 8)
+// console.log( "result40 = ", result40)
+
 let result40 = combinationSum2([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 27)
 console.log( "result40 = ", result40)
