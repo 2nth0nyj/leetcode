@@ -1,31 +1,34 @@
 type treeNode = {
     candidate: number,
     parentCandidateNode: treeNode | undefined,
-    parentCandidatesIndexSet: Set<number>,
+    parentCandidatesIndexSet: Array<number>,
     childrenCandidates?: treeNode[],
     nodeValue: number,
 }
 
 export function combinationSum2(candidates: number[], target: number): number[][] {
     let results: number[][] = []
-    let rootNode = { candidate: -1, parentCandidateNode: undefined, parentCandidatesIndexSet: new Set<number>(), nodeValue: 0 }
+    let rootNode = { candidate: -1, parentCandidateNode: undefined, parentCandidatesIndexSet: new Array<number>(), nodeValue: 0 }
     generateResults(candidates, target, rootNode, results)
     return results
 };
 
 function generateResults(candidates: number[], target: number, node: treeNode, results: number[][]) {
-    if (node.parentCandidatesIndexSet.size == candidates.length) {
+    if (node.parentCandidatesIndexSet.length == candidates.length) {
         return
     }
+    let maxIndex = node.parentCandidatesIndexSet.reduce((a,b) => {return Math.max(a,b)}, -Infinity)
     candidates.forEach((candidateValue, candidateIndex) => {
-        if (!node.parentCandidatesIndexSet.has(candidateIndex) && candidateValue + node.nodeValue <= target ) {
+        if (candidateIndex > maxIndex && candidateValue + node.nodeValue <= target ) {
             if (!node.childrenCandidates) {
                 node.childrenCandidates = []
             }
+            let updatedParentCandidatesIndexSet = Array.from(node.parentCandidatesIndexSet)
+            updatedParentCandidatesIndexSet.push(candidateIndex)
             let newNode: treeNode = {
                 candidate: candidateValue,
                 parentCandidateNode: node,
-                parentCandidatesIndexSet: new Set<number>(node.parentCandidatesIndexSet).add(candidateIndex),
+                parentCandidatesIndexSet: updatedParentCandidatesIndexSet,
                 nodeValue: candidateValue + node.nodeValue,
             }
             node.childrenCandidates.push(newNode)
