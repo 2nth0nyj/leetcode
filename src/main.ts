@@ -25,6 +25,7 @@
 import { solveSudoku } from './leetcode/37'
 import { countAndSay } from './leetcode/38'
 import { combinationSum } from './leetcode/39'
+import { combinationSum2 } from './leetcode/40'
 
 
 
@@ -112,5 +113,5 @@ import { combinationSum } from './leetcode/39'
 // let result38 = countAndSay(4)
 // console.log( "result38 = ", result38)
 
-let result39 = combinationSum([2,3,5], 8)
-console.log( "result39 = ", result39)
+let result40 = combinationSum2([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 27)
+console.log( "result40 = ", result40)
