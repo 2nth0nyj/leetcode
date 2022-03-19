@@ -26,6 +26,7 @@ import { solveSudoku } from './leetcode/37'
 import { countAndSay } from './leetcode/38'
 import { combinationSum } from './leetcode/39'
 import { combinationSum2 } from './leetcode/40'
+import { firstMissingPositive } from './leetcode/41'
 
 
 
@@ -116,5 +117,8 @@ import { combinationSum2 } from './leetcode/40'
 // let result40 = combinationSum2([10,1,2,7,6,1,5], 8)
 // console.log( "result40 = ", result40)
 
-let result40 = combinationSum2([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 27)
-console.log( "result40 = ", result40)
+// let result40 = combinationSum2([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 27)
+// console.log( "result40 = ", result40)
+
+let result41 = firstMissingPositive([7,8,9,11,12])
+console.log( "result41 = ", result41)
