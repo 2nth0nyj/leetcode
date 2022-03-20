@@ -27,6 +27,8 @@ import { countAndSay } from './leetcode/38'
 import { combinationSum } from './leetcode/39'
 import { combinationSum2 } from './leetcode/40'
 import { firstMissingPositive } from './leetcode/41'
+import {trap} from './leetcode/42'
+
 
 
 
@@ -120,5 +122,8 @@ import { firstMissingPositive } from './leetcode/41'
 // let result40 = combinationSum2([1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 27)
 // console.log( "result40 = ", result40)
 
-let result41 = firstMissingPositive([7,8,9,11,12])
-console.log( "result41 = ", result41)
+// let result41 = firstMissingPositive([7,8,9,11,12])
+// console.log( "result41 = ", result41)
+
+let result42 = trap([4, 2, 0, 3, 2, 5])
+console.log( "result42 = ", result42)
