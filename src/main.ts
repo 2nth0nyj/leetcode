@@ -28,6 +28,7 @@ import { combinationSum } from './leetcode/39'
 import { combinationSum2 } from './leetcode/40'
 import { firstMissingPositive } from './leetcode/41'
 import {trap} from './leetcode/42'
+import { multiply } from './leetcode/43'
 
 
 
@@ -127,3 +128,6 @@ import {trap} from './leetcode/42'
 
 let result42 = trap([4, 2, 0, 3, 2, 5])
 console.log( "result42 = ", result42)
+
+let result43 = multiply("0", "0")
+console.log("result43 = ", result43)
