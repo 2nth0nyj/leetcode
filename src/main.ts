@@ -28,7 +28,8 @@ import { combinationSum } from './leetcode/39'
 import { combinationSum2 } from './leetcode/40'
 import { firstMissingPositive } from './leetcode/41'
 import {trap} from './leetcode/42'
-import { multiply } from './leetcode/43'
+import { multiply } from './leetcode/43_multiply'
+import { isMatch } from './leetcode/44_isMatch'
 
 
 
@@ -131,3 +132,6 @@ console.log( "result42 = ", result42)
 
 let result43 = multiply("0", "0")
 console.log("result43 = ", result43)
+
+let result44 = isMatch("aa", "*")
+console.log( "result44 = ", result44)
