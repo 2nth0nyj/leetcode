@@ -1,5 +1,5 @@
-export const maxInt32 = Math.pow(2, 31) - 1
-export const minInt32 = Math.pow(-2, 31)
+export const maxInt32 = 2147483647
+export const minInt32 = -2147483648
 
 export function maxPower(count: number): number {
     var j: number = 1
