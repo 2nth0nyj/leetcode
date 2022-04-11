@@ -32,6 +32,7 @@ import { multiply } from './leetcode/43_multiply'
 import { isMatch } from './leetcode/44_isMatch'
 import { jump } from './leetcode/45_jump'
 import { permute } from './leetcode/46_permute'
+import { permuteUnique } from './leetcode/47_permuteUnique'
 
 
 
@@ -143,5 +144,5 @@ import { permute } from './leetcode/46_permute'
 // console.log( "result45 = ", result45)
 
 let a = [1,2,3]
-let result46 = permute(a)
-console.log( "result46 = ", result46)
+let result47 = permuteUnique(a)
+console.log( "result47 = ", result47)
