@@ -33,6 +33,7 @@ import { isMatch } from './leetcode/44_isMatch'
 import { jump } from './leetcode/45_jump'
 import { permute } from './leetcode/46_permute'
 import { permuteUnique } from './leetcode/47_permuteUnique'
+import { rotate } from './leetcode/48_rotate'
 
 
 
@@ -143,6 +144,13 @@ import { permuteUnique } from './leetcode/47_permuteUnique'
 // let result45 = jump(a)
 // console.log( "result45 = ", result45)
 
-let a = [1,2,3]
-let result47 = permuteUnique(a)
-console.log( "result47 = ", result47)
+let matrix =[
+    [2,29,20,26,16,28],
+    [12,27,9,25,13,21],
+    [32,33,32,2,28,14],
+    [13,14,32,27,22,26],
+    [33,1,20,7,21,7],
+    [4,24,1,6,32,34]
+]
+rotate(matrix)
+console.log("matrix = ", matrix)
